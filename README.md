@@ -42,45 +42,45 @@ I initially used DTrace for Java to study the interaction of the OS with the JVM
 
 ####jmemstats
 
-```tex
-Java Method                            objects alloc
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-java/lang/StringCoding$StringEncoder.encode      486
-java/util/HashMap.newKeyIterator                 221
-org/[...]/buf/CharChunk.toStringInternal         142 
-java/io/UnixFileSystem.resolve                   131 
-java/lang/String.substring                       122 
-java/lang/StringCoding$StringDecoder.decode      108 
-java/net/Socket.getInputStream                   100 
-java/lang/AbstractStringBuilder.expandCapacity   99
-java/lang/Object.clone                           91
-java/io/UnixFileSystem.list                      74
+```
+    Java Method                            objects alloc
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    java/lang/StringCoding$StringEncoder.encode      486
+    java/util/HashMap.newKeyIterator                 221
+    org/[...]/buf/CharChunk.toStringInternal         142 
+    java/io/UnixFileSystem.resolve                   131 
+    java/lang/String.substring                       122 
+    java/lang/StringCoding$StringDecoder.decode      108 
+    java/net/Socket.getInputStream                   100 
+    java/lang/AbstractStringBuilder.expandCapacity   99
+    java/lang/Object.clone                           91
+    java/io/UnixFileSystem.list                      74
 ```
 
 ####jlockstat
 
-```tex
-Java Method                                  Native      cnt
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-java/io/UnixFileSystem.getBooleanAttributes0 malloc      367
-java/io/UnixFileSystem.getBooleanAttributes0 free        363   
-java/lang/ClassLoader.defineClass1           free        288 
-java/lang/ClassLoader.defineClass1           malloc      290
-java/io/UnixFileSystem.getLastModifiedTime   free        136 
-java/io/UnixFileSystem.getLastModifiedTime   malloc      136 
-java/io/UnixFileSystem.list                  readdir64_r 134
+```
+    Java Method                                  Native      cnt
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    java/io/UnixFileSystem.getBooleanAttributes0 malloc      367
+    java/io/UnixFileSystem.getBooleanAttributes0 free        363   
+    java/lang/ClassLoader.defineClass1           free        288 
+    java/lang/ClassLoader.defineClass1           malloc      290
+    java/io/UnixFileSystem.getLastModifiedTime   free        136 
+    java/io/UnixFileSystem.getLastModifiedTime   malloc      136 
+    java/io/UnixFileSystem.list                  readdir64_r 134
 ```
 
 ####jiosnoop
 
-```tex
-Java Method                                     syscall  cnt  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-org/apache/coyote/Response.action               _so_send  7
-org[...]Http11Processor.action                  _read     7
-org/[...]OutputStreamOutputBuffer.doWrite       _so_send  2
-org/[...]Http11ConnectionHandler.processConnect _read     1
-org[...]/mapper/Mapper.internalMapWrapper       _read     1
+```
+    Java Method                                     syscall  cnt  
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    org/apache/coyote/Response.action               _so_send  7
+    org[...]Http11Processor.action                  _read     7
+    org/[...]OutputStreamOutputBuffer.doWrite       _so_send  2
+    org/[...]Http11ConnectionHandler.processConnect _read     1
+    org[...]/mapper/Mapper.internalMapWrapper       _read     1
 ```
 
 ### Citation information
